@@ -1,0 +1,54 @@
+Git命令行
+1.查看所有分支
+git branch -a
+
+2.创建本地分支（但是没有切换分支）
+git branch 分支名
+
+3.切换git分支
+git checkout 分支名
+
+4.提交本地分支到远程
+git push origin 分支名
+
+5.拉取代码
+git pull
+
+6.提交代码
+  a.查看代码的修改状态
+  git status
+  b.查看代码修改的内容
+  git diff <file>
+  如果该文件已暂存，那么就应该使用
+  git diff -cashed<file>
+  c.暂存需要提交的文件
+  如果全部
+  git add .
+  如果是新建的文件
+  git add <file>
+  如果是修改的文件
+  git add <file>
+  如果是删除的文件
+  git rm <file>
+  d.提交暂存的文件
+  git commit -m 注释内容
+  e.同步到服务器
+  同步到服务器需要先将服务器代码同步到本地
+  git pull
+  查看冲突
+  git checkout [文件路径]
+  手动打开文件解决冲突
+  同步到服务器
+  git push origin 分支名
+
+Git提交规范
+type:
+  .feat:新功能
+  .fix:修复bug
+  .doc:文档改变
+  .style:格式（不影响代码运行的改动）
+  .refactor:重构（既不是新增功能，也不是修改bug的代码变动），某个已有功能重构
+  .test:增加测试
+  .perf:性能优化
+  .chore:改变了build工具
+  .revert:撤销上一次的commit
